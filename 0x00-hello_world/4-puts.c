@@ -1,6 +1,9 @@
 #include <stdio.h>
 /**
-* This code uses the funtion put to print out a sentence
+* main - Prints using puts
+
+* Description: Prints "Programming is like building a multilingual puzzle"
+* Return: The input sentence
 */
 int main(void)
 {
