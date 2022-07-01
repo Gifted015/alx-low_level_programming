@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
 * main - Prints using puts
-
 * Description: Prints "Programming is ..."
 * Return: The input sentence
 */
