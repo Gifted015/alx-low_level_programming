@@ -1,8 +1,7 @@
 #include <stdio.h>
-
-int main (void)
+int main(void)
 {
-  char  *cont = "\"Programming is like building a multilingual puzzle\n";
-  puts(cont);
-  return(0);
+char  *cont = "\"Programming is like building a multilingual puzzle";
+puts (cont);
+return (0);
 }
