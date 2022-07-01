@@ -2,7 +2,7 @@
 /**
 * main - Prints using puts
 
-* Description: Prints "Programming is like building a multilingual puzzle"
+* Description: Prints "Programming is ..."
 * Return: The input sentence
 */
 int main(void)
