@@ -2,6 +2,6 @@
 int main(void)
 {
 char  *cont = "\"Programming is like building a multilingual puzzle";
-puts (cont);
+puts(cont);
 return (0);
 }
