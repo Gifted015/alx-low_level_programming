@@ -8,13 +8,17 @@ int main(void)
 {
 int x;
 int y;
+int z;
 for (x = '0'; x < '9'; x++)
 {
-for (y = '1'; y <= '9'; y++)
+for (y = x + 1; y <= '9'; y++)
+{
+for (z = y + 1; z <= '9'; z++)
 {
 putchar(x);
 putchar(y);
-if (x == 8 && y == 9)
+putchar(z);
+if (x == '7' && y == '8' && z == '9')
 {
 break;
 }
@@ -26,6 +30,7 @@ putchar(' ');
 else
 {
 continue;
+}
 }
 }
 }
