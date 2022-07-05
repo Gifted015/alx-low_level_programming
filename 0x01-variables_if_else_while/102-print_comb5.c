@@ -32,9 +32,7 @@ else
 putchar(',');
 putchar(' ');
 }
-d--;
 }
-d++;
 }
 }
 }
