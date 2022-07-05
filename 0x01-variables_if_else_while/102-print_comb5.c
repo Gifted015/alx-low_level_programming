@@ -6,32 +6,22 @@
 */
 int main(void)
 {
-int a;
-int b;
-int c;
-int d;
-for (a = '0'; a <= '9'; a++)
+int i, j;
+for (i = 0; i < 100; i++)
 {
-for (b = '0'; b <= '9'; b++)
+for (j = 0; j < 100; j++)
 {
-for (c = a; c <= '9'; c++)
+if (i < j)
 {
-for (d = b + 1; d <= '9'; d++)
-{
-putchar(a);
-putchar(b);
+putchar((i / 10) + 48);
+putchar((i % 10) + 48);
 putchar(' ');
-putchar(c);
-putchar(d);
-if (a == '9' && b == '8' && c == '9' && d == '9')
-{
-break;
-}
-else
+putchar((j / 10) + 48);
+putchar((j % 10) + 48);
+if (i != 98 || j != 99)
 {
 putchar(',');
 putchar(' ');
-}
 }
 }
 }
