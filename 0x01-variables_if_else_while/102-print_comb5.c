@@ -32,6 +32,7 @@ else
 putchar(',');
 putchar(' ');
 }
+d = 0;
 }
 }
 }
