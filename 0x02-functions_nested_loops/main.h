@@ -1,6 +1,6 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
-int main()
+int print_alphabet(void);
 
 #endif
