@@ -13,23 +13,27 @@ for (x = 0; x <= 9; x++)
 {
 for (y = 0; y <= 9; y++)
 {
-int a = (x * y);
-int b = (a / 10);
 
-if (a > 9)
+int a = x * y;
+
+if (y == 0)
 {
-_putchar (b + 48);
+_putchar (a + 48);
 }
-
-_putchar ((a % 10) + 48);
-if (y != 9)
+   
+if (a <= 9 && y != 0)
 {
 _putchar (',');
 _putchar (' ');
-if (b == 0)
-{
 _putchar (' ');
+_putchar (a + 48);
 }
+else if (a >= 10)
+{
+_putchar (',');
+_putchar (' ');
+_putchar ((a / 10) + 48);
+_putchar ((a % 10) + 48);
 }
 }
 
