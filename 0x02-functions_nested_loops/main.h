@@ -2,7 +2,7 @@
 #define HEADER_FILE
 
 #include <stdio.h>
-int _abs(int);
+int print_last_digit(int);
 int _putchar(char c);
 
 #endif
