@@ -19,8 +19,7 @@ int a = x * y;
 if (y == 0)
 {
 _putchar (a + 48);
-}
-   
+}  
 if (a <= 9 && y != 0)
 {
 _putchar (',');
