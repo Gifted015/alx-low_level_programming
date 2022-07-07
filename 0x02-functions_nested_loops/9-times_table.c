@@ -26,6 +26,10 @@ if (y != 9)
 {
 _putchar (',');
 _putchar (' ');
+if (a <= 9 && y >= 2)
+{
+_putchar (' ');
+}
 }
 }
 
