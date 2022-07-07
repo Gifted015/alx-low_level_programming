@@ -1,6 +1,7 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
-int print_alphabet(void);
+#include <stdio.h>
+int print_alphabet_x10(void);
 
 #endif
