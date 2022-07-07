@@ -1,4 +1,4 @@
-#include "main.c"
+#include "1-main.c"
 #include <stdio.h>
 /**
  *print_alphabet -prints all the alphabets
