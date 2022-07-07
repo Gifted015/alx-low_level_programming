@@ -26,7 +26,7 @@ if (y != 9)
 {
 _putchar (',');
 _putchar (' ');
-if (a <= 9)
+if (b == 0)
 {
 _putchar (' ');
 }
