@@ -2,6 +2,7 @@
 #define HEADER_FILE
 
 #include <stdio.h>
+void jack_bauer(void);
 int _abs(int n);
 int print_sign(int n);
 int _isalpha(int c);

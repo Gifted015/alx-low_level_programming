@@ -8,17 +8,20 @@
 void jack_bauer(void)
 {
 int x;
- int y;
- for (x = 0; x <= 100; x++)
-   {
-     for (y = 0; y <= 100; y++)
-       {
-         putchar ((x/10) + 48
-		   putchar ((x/10) + 48)
-		   putchar ((x/10) + 48)
-		   putchar ((x/10) + 48)
-		   putchar ((x/10) + 48)
-       }
-   }
-return (0);
+int y;
+for (x = 0; x <= 23; x++)
+{
+for (y = 0; y <= 60; y++)
+{
+if (x <= 23 && y != 60)
+{
+putchar ((x / 10) + 48);
+putchar ((x % 10) + 48);
+putchar (':');
+putchar ((y / 10) + 48);
+putchar ((y % 10) + 48);
+putchar ('\n');
+}
+}
+}
 }
