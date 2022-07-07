@@ -2,6 +2,7 @@
 #define HEADER_FILE
 
 #include <stdio.h>
+void times_table(void);
 void jack_bauer(void);
 int _abs(int n);
 int print_sign(int n);
