@@ -2,7 +2,7 @@
 #define HEADER_FILE
 
 #include <stdio.h>
-int print_sign(int n);
+int _abs(int);
 int _putchar(char c);
 
 #endif
