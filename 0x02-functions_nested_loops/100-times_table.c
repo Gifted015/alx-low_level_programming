@@ -82,8 +82,4 @@ greater_100(a);
 _putchar ('\n');
 }
 }
-else
-{
-_putchar('\n');
-}
 }
