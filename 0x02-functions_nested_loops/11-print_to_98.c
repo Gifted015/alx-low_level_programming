@@ -59,14 +59,14 @@ if (x == 98)
 _putchar ('9');
 _putchar ('8');
 }
-if ((x >= 10 && x < 98) || (x <= (-10)))
+if ((x >= 10 && x < 98) || (x <= (-10) && x > (-100)))
 {
 _putchar ((_abs(x) / 10) + '0');
 _putchar ((_abs(x) % 10) + '0');
 _putchar (',');
 _putchar (' ');
 }
-if (n > 98)
+if (x <= (-100))
 {
 greater(n);
 }
