@@ -3,8 +3,9 @@
 
 #include <stdio.h>
 void print_times_table(int n);
-void less(int n);
-void greater(int n);
+void less_10(int n);
+void greater_10_not_100(int n);
+void greater_100(int n);
 void print_to_98(int n);
 int add(int a, int b);
 void times_table(void);
