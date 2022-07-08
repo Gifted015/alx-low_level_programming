@@ -11,7 +11,7 @@ void greater(int n)
 int x;
 for (x = n; x > 97; x--)
 {
-if (x >= 100 || x <= (-100))
+if (x >= 100)
 {
 _putchar ((_abs(x) / 100) + '0');
 _putchar ((_abs(x) % 100) / 10 + '0');
@@ -68,7 +68,11 @@ _putchar (' ');
 }
 if (x <= (-100))
 {
-greater(n);
+_putchar ((_abs(x) / 100) + '0');
+_putchar ((_abs(x) % 100) / 10 + '0');
+_putchar ((_abs(x) % 10) + '0');
+_putchar (',');
+_putchar (' ');
 }
 }
 }
