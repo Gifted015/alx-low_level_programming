@@ -2,6 +2,7 @@
 #define HEADER_FILE
 
 #include <stdio.h>
+void print_times_table(int n);
 void less(int n);
 void greater(int n);
 void print_to_98(int n);
