@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include "6-abs.c"
 /**
  *greater - runs for > 98
  *@n: starting point
@@ -12,9 +13,9 @@ for (x = n; x > 97; x--)
 {
 if (x >= 100)
 {
-_putchar ((x / 100) + '0');
-_putchar ((x % 100) / 10 + '0');
-_putchar ((x % 10) + '0');
+_putchar ((_abs(x) / 100) + '0');
+_putchar ((_abs(x) % 100) / 10 + '0');
+_putchar ((_abs(x) % 10) + '0');
 _putchar (',');
 _putchar (' ');
 }
@@ -25,15 +26,14 @@ _putchar ('8');
 }
 else
 {
-_putchar ((x / 10) + '0');
-_putchar ((x % 10) + '0');
+_putchar ((_abs(x) / 10) + '0');
+_putchar ((_abs(x) % 10) + '0');
 _putchar (',');
 _putchar (' ');
 }
 }
 }
 
-#include "6-abs.c" 
 /**
  *less - runs for < 98
  *@n: starting point
@@ -66,6 +66,10 @@ _putchar ((_abs(x) % 10) + '0');
 _putchar (',');
 _putchar (' ');
 }
+if (n > 98)
+{
+greater(n);
+}
 }
 }
 
@@ -76,7 +80,6 @@ _putchar (' ');
 
 void print_to_98(int n)
 {
- 
 if (n < 98)
 {
 less(n);
