@@ -11,16 +11,17 @@ long int i;
 long int x;
 long int r = 1;
 long int a = 2;
+long int b = 2;
 for (x = 0; x <= 100; x++)
 {
-if (a % 2 == 0 && a > 0 && a <= 4000000)
+if (a % 2 == 0 && a > 2 && a <= 4000000)
 {
-printf("%li ", a);
+b = b + a;
 }
 i = r + a;
 r = a;
 a = i;
 }
-printf("\n");
+printf("%li\n", b);
 return (0);
 }
