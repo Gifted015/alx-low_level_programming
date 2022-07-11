@@ -1,19 +1,15 @@
 #include "main.h"
 
 /**
- *_isdigit - checks for a digit
- *@c: character to be checked
- *Return: returns 1 if c is a digit and 0 if otherwise
+ *print_numbers - prints the numbers, from 0 to 9, followed by a new line
  */
 
-int _isdigit(int c)
+void print_numbers(void)
 {
-if (c >= 48 && c <= 57)
+int x;
+ for (x = 48; x <= 57; x++)
 {
-return (1);
+_putchar(x);
 }
-else
-{
-return (0);
-}
+_putchar('\n');
 }
