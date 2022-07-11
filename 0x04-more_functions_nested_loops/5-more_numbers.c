@@ -1,0 +1,24 @@
+#include "main.h"
+
+/**
+ *more_numbers - 
+ *Description: doesnt print 2 and 4
+ */
+
+void more_numbers(void)
+{
+int x;
+int y;
+for (x = 0; x <= 9; x++)
+{
+for (y = 0; y <= 14; y++)
+{
+if (y > 9)
+{
+_putchar((y / 10) + 48);
+}
+_putchar((y % 10) + 48);
+}
+_putchar('\n');
+}
+}
