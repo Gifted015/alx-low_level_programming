@@ -1,50 +1,31 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *less_10 - prints for a < 10
+ *check - prints for a
  *@a: input
  *Return: 0
  */
-
-void less_10(int a)
+void check(int a)
 {
-_putchar (a + 48);
-}
-
-/**
- *greater_10_not_100 - prints for a >= 10 but < 100
- *@a: input
- *Return: 0
- */
-void greater_10_not_100(int a)
-{
-_putchar ((a / 10) + 48);
-_putchar ((a % 10) + 48);
-}
-
-/**
- *greater_100_not_1000 - prints for a >= 100 but < 1000
- *@a: input
- *Return: 0
- */
-void greater_100_not_1000(int a)
-{
-_putchar ((a / 100) + 48);
-_putchar ((a % 100) / 10 + 48);
-_putchar ((a % 10) + 48);
-}
-
-
-/**
- *greater_1000 - prints for a >= 1000
- *@a: input
- *Return: 0
- */
-void greater_1000(int a)
-{
-_putchar ((a / 1000) + 48);
+if (a >= 1000000000)
+_putchar ((a / 1000000000) + 48);
+if (a >= 100000000)
+_putchar ((a % 1000000000) / 100000000 + 48);
+if (a >= 10000000)
+_putchar ((a % 100000000) / 10000000 + 48);
+if (a >= 1000000)
+_putchar ((a % 10000000) / 1000000 + 48);
+if (a >= 100000)
+_putchar ((a % 1000000) / 100000 + 48);
+if (a >= 10000)
+_putchar ((a % 100000) / 10000 + 48);
+if (a >= 1000)
+_putchar ((a % 10000) / 1000 + 48);
+if (a >= 100)
 _putchar ((a % 1000) / 100 + 48);
+if (a >= 10)
 _putchar ((a % 100) / 10 + 48);
+if (a >= 0)
 _putchar ((a % 10) + 48);
 }
 
@@ -60,20 +41,5 @@ if (n < 0)
 _putchar('-');
 n = -n;
 }
-if (n <= 9)
-{
-less_10(n);
-}
-else if (n >= 10 && n < 100)
-{
-greater_10_not_100(n);
-}
-else if (n >= 100 && n < 1000)
-{
-greater_100_not_1000(n);
-}
-else if (n >= 1000)
-{
-greater_1000(n);
-}
+check(n);
 }
