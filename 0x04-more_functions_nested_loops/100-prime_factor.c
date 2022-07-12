@@ -7,12 +7,12 @@
 
 int main(void)
 {
-long int x;
-long int r;
-long int s;
-long int y;
-long int k;
-for (x = 2; x <= 612852475143; x++)
+unsigned long int x;
+unsigned long int r;
+unsigned long int s;
+unsigned long int y;
+unsigned long int k;
+for (x = 2; x <= 612852475; x++)
 {
 if (612852475143 % x == 0)
 {
@@ -31,6 +31,6 @@ k = x;
 }
 }
 }
-printf("%ld\n", k);
+printf("%lu\n", k);
 return (0);
 }
