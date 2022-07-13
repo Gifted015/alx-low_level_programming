@@ -25,7 +25,6 @@ if (a >= 100)
 _putchar ((a % 1000) / 100 + 48);
 if (a >= 10)
 _putchar ((a % 100) / 10 + 48);
-if (a >= 0)
 _putchar ((a % 10) + 48);
 }
 
@@ -39,7 +38,17 @@ void print_number(int n)
 if (n < 0)
 {
 _putchar('-');
+if (n > (-2147483648))
+{
 n = -n;
+check(n);
 }
+else
+{
+check(-n / 10);
+check(8);
+}
+}
+else
 check(n);
 }
