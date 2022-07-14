@@ -1,3 +1,4 @@
+
 #include "main.h"
 #include "2-strlen.c"
 /**
@@ -7,12 +8,13 @@
 
 void print_rev(char *s)
 {
-
-long int a;
+int r;
+char * a;
 char *i;
+char *p;
 int q = _strlen(s);
-
-for (a = 1; a <= q; a++)
+p = s;
+for (r = 1; r <= q; r++)
 {
 if (*s != '\0')
 {
@@ -24,14 +26,15 @@ break;
 }
 }
 i = s;
-for (a = 1; a <= q; a++)
+for (a = p; a <= s; a++)
 {
 if (*i == '\0')
-_putchar(8);
+i--;
 else
+{
 _putchar(*i);
 i--;
-
+}
 }
 _putchar('\n');
 }
