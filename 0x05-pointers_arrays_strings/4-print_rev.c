@@ -1,4 +1,3 @@
-
 #include "main.h"
 #include "2-strlen.c"
 /**
@@ -9,7 +8,7 @@
 void print_rev(char *s)
 {
 int r;
-char * a;
+char *a;
 char *i;
 char *p;
 int q = _strlen(s);
