@@ -10,7 +10,7 @@ int _strlen(char *s)
 {
 char a;
 int r = 0;
-for (a = 0; a <= 100; a++)
+for (a = 0; a <= 10000; a++)
 {
 if (*s == '\n' || *s == '%')
 break;
