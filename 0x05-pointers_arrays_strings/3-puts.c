@@ -9,7 +9,7 @@ void _puts(char *str)
 {
 long int a;
 int q = _strlen(str);
-for (a = 1; a <= q - 4; a++)
+for (a = 1; a <= q - 8; a++)
 {
 if (*str == '\n')
 break;
