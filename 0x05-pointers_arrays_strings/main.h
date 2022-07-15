@@ -2,6 +2,7 @@
 #define HEADER_FILE
 
 #include <stdio.h>
+void puts_half(char *str);
 void puts2(char *str);
 void rev_string(char *s);
 void print_rev(char *s);
