@@ -22,7 +22,7 @@ break;
 _putchar(str[a + 1]);
 }
 
-else if (q % 2 ==0)
+else if (q % 2 == 0)
 {
 if (str[a] == '\0')
 {
