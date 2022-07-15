@@ -12,10 +12,10 @@ long int a;
 int r = 0;
 for (a = 0; a <= 10000; a++)
 {
-if (*s == '\n' || *s == '%')
+if (*s == '\0')
 break;
 r++;
 s++;
 }
-return (r - 1);
+return (r);
 }
