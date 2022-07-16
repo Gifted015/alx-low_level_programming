@@ -14,6 +14,8 @@ long int b;
 int n = _strlen(src);
 for (b = 0; b < n; b++)
 {
+if (src[b] == '\0')
+break;
 *(dest + b) = src[b];
 }
 return (dest);
