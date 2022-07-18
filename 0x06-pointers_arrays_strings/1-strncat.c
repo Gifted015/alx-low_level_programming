@@ -15,13 +15,14 @@ int j;
 int a = strlen(dest);
 for (j = a; j < (a + n); j++)
 {
-*(dest + j) = *src;
-src++;
 if (*(dest + j) == '\n' || *src == '\n')
 {
 *(dest + j) = '\n';
 break;
 }
+else
+*(dest + j) = *src;
+src++;
 }
 return (dest);
 }
