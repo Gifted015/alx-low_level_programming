@@ -1,0 +1,13 @@
+#include "main.h"
+#include <stdlib.h>
+/**
+ *main - generates random valid passwords for the program 101-crackme
+ */
+
+void main(void)
+{
+int x;
+srand(50);
+x = rand();
+printf("%d", x);
+}
