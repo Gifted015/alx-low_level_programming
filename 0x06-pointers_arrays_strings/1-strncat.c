@@ -18,8 +18,10 @@ for (a = 0; dest[a] != '\0'; a++)
 }
 for (j = 0; j < n; j++)
 {
-*(dest + a) = src[j];
+dest[a] = src[j];
 a++;
+if (src[j] == '\0')
+j = n;
 }
 return (dest);
 }
