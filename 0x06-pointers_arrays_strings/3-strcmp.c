@@ -9,15 +9,13 @@
 
 int _strcmp(char *s1, char *s2)
 {
-int i, j, k, l = 0, m = 0;
-for (j = 0; s1[j] != '\0'; j++)
+int i = 0, j, k = 0;
+for (j = 0; s2[k] != '\0'; j++)
 {
-l++;
+i = i + (s1[j] - s2[k]);
+k++;
+if (i != 0)
+break;
 }
-for (k = 0; s2[k] != '\0'; k++)
-{
-m++;
-}
-i = l - m;
 return (i);
 }
