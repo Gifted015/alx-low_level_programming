@@ -19,7 +19,7 @@ for (a = 0; dest[a] != '\0'; a++)
 for (j = 0; j < n; j++)
 {
 *(dest + a) = src[j];
-src++;
+a++;
 }
 return (dest);
 }
