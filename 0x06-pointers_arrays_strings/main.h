@@ -2,6 +2,7 @@
 #define HEADER_FILE
 
 #include <stdio.h>
+char *rot13(char *);
 char *leet(char *);
 char *cap_string(char *);
 char *string_toupper(char *);
