@@ -8,16 +8,17 @@
 
 char *rot13(char *a)
 {
-int b;
+int b, d;
+char c[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char e[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 for (b = 0; a[b] != '\0'; b++)
 {
-if ((a[b] >= 65 && a[b] <=  77) || (a[b] >= 97 && a[b] <= 109))
+for (d = 0; c[d] != '\0'; d++)
 {
-a[b] = a[b] + 13;
+if (a[b] == c[d])
+{
+a[b] = e[d];
 }
-else if ((a[b] >= 78 && a[b] <= 90) || (a[b] >= 110 && a[b] <= 122))
-{
-a[b] = a[b] - 13;
 }
 }
 return (a);
