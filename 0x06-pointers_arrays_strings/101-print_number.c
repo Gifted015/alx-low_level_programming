@@ -101,10 +101,10 @@ void print_number(int n)
 {
 if (n < 0)
 {
-_putchar('-');
+_putchar ('-');
 n = -n;
 }
-if (n >= 100000000)
+if (n >= 100000000 || n == -2147483648)
 n2(n);
 if (n < 100000000 && n >= 100000)
 n1(n);
@@ -128,6 +128,8 @@ if (n < 100 && n >= 10)
 _putchar (((n % 100) / 10) + 48);
 _putchar((n % 10) + 48);
 }
-if (n < 10)
+if (n < 10 && n >= 0)
 _putchar((n % 10) + 48);
+if (n < 0)
+print_number(n);
 }
