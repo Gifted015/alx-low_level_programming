@@ -28,5 +28,5 @@ if (*s == accept[b])
 return (s);
 }
 else
-return (0);
+return ('\0');
 }
