@@ -19,13 +19,12 @@ break;
 }
 if (s[a] == accept[b])
 {
-s = s + a;
 break;
 }
 }
-if (*s == accept[b])
+if (s[a] == accept[b])
 {
-return (s);
+return (s + a);
 }
 else
 return ('\0');
