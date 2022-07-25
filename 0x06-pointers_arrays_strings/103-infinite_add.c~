@@ -1,0 +1,26 @@
+#include "main.h"
+#include <string.h>
+/**
+ *infinite_add - adds two numbers
+ *@n1: first number
+ *@n2: second number
+ *@r: the buffer that stores the result
+ *@size_r: the buffer size
+ *Return: r
+ */
+
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
+{
+int b;
+int c = 0;
+for (b = size_r; b >= 0; b--)
+{
+r[b] = n1[b] + n2[b] + c;
+if (r[b] > '9')
+{
+c = r[b] /10;
+r[b] = r[b] % 10;
+}
+}
+return (r);
+}
