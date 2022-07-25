@@ -17,8 +17,8 @@ break;
 }
 s++;
 }
-if (*s == '\0')
-return (0);
-else
+if (*s == c)
 return (s);
+else
+return (0);
 }
