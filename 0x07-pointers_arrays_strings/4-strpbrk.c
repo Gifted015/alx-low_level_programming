@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_strbrk - searches a string for any of a set of bytes
+ *_strpbrk - searches a string for any of a set of bytes
  *@s: string to be searched
  *@accept: string of bytes to be found
  *Return: s if byte is found and NULL if not
@@ -23,5 +23,10 @@ s = s + a;
 break;
 }
 }
+if (*s == accept[b])
+{
 return (s);
+}
+else
+return (0);
 }
