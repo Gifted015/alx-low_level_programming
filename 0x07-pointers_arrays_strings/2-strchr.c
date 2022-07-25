@@ -17,8 +17,5 @@ break;
 }
 s++;
 }
-if (*s == '\0')
-return (NULL);
-else
 return (s);
 }
