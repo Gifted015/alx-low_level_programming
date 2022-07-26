@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_print_chessboard - prints the chessboard
+ *print_chessboard - prints the chessboard
  *@a: content
  */
 
