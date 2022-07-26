@@ -15,7 +15,7 @@ return (0);
 }
 else
 _putchar(*s);
-return(_puts(s + 1));
+return (_puts(s + 1));
 }
 
 
