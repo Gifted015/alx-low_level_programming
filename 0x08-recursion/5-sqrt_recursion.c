@@ -9,13 +9,13 @@
 
 int _sqrt(int n, int i)
 {
-if (i * i == n)
+if ((i * i) == n)
 return (i);
 
-else if (i == 0)
+else if (i == n)
 return (-1);
 
-return (_sqrt(n, (i - 1)));
+return (_sqrt(n, (i + 1)));
 }
 
 
@@ -32,7 +32,7 @@ return (-1);
 
 else
 {
-int i = n;
+int i = 0;
 n = _sqrt(n, i);
 return (n);
 }
