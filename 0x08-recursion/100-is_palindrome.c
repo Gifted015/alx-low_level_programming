@@ -45,6 +45,7 @@ return (_rev((s - 1), (a + 1)));
  *@i: 1st string
  *@j: 2nd string
  *@k: int to count the similar characters
+ *@l: recursion ender
  *Return: k
  */
 
