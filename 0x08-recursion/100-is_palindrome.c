@@ -48,15 +48,14 @@ return (_rev((s - 1), (a + 1)));
  *Return: k
  */
 
-int _palindrome(char *i, char *j, int k)
+int _palindrome(char *i, char *j, int k, char *l)
 {
-if (*i == '\0' || *j == '\0')
+if (i == l)
 return (k);
 
 else if (*i == *j)
 k = k + 1;
-
-return (_palindrome((i + 1), (j + 1), k));
+return (_palindrome((i + 1), (j + 1), k, l));
 }
 
 
@@ -69,11 +68,14 @@ return (_palindrome((i + 1), (j + 1), k));
 int is_palindrome(char *s)
 {
 int n[] = {0};
-int r, k = 0;
-char i[100], j[100];
+int r;
+char *k;
+char i[1000], j[1000];
 s = _ass(s, i, n);
+k = &i[*n];
 _rev(s, j);
-r = _palindrome(i, j, k);
+r = _palindrome(i, j, 0, k);
+
 if (r == *n)
 return (1);
 
