@@ -1,7 +1,6 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 #include <stdio.h>
-#include "_putchar.c"
 #include "2-strlen.c"
 #include "3-puts.c"
 
