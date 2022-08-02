@@ -3,6 +3,7 @@
 
 
 #include <stdio.h>
+#include "100-atoi.c"
 
 int _putchar(char c);
 
