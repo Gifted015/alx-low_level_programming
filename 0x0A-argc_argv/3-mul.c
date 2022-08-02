@@ -13,7 +13,7 @@ int i;
 long int a;
 char e[] = "Error";
 
-if (argc == 1 || argc > 3)
+if (argc < 3 || argc > 3)
 {
 for (i = 0; e[i] != '\0'; i++)
 _putchar(e[i]);
