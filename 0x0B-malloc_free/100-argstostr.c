@@ -26,7 +26,7 @@ for (j = 0; av[i][j] != '\0'; j++)
 k++;
 }
 }
-n = malloc(sizeof(char) * (k + ac - 1));
+n = malloc(sizeof(char) * (k + ac + 1));
 k = 0;
 for (i = 0; i < ac; i++)
 {
