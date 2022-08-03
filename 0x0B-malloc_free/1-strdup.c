@@ -19,7 +19,11 @@ return (NULL);
 
 else
 {
-A = malloc(sizeof(str));
+
+for (i = 0; str[i] != '\0'; i++)
+{
+}
+A = malloc(sizeof(char) * i);
 
 if (A != NULL)
 {
