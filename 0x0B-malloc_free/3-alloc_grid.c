@@ -26,16 +26,25 @@ if (A != NULL)
 for (i = 0; i < height; i++)
 {
 A[i] = malloc(sizeof(int) * width);
+if (A[i] != NULL)
+{
 for (j = 0; j < width; j++)
 {
 A[i][j] = 0;
 }
 }
-return (A);
+else
+{
+free(A);
+return (NULL);
+}
+}
 }
 else
 {
+free(A);
 return (NULL);
 }
+return (A);
 }
 }
