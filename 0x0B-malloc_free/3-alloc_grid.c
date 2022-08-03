@@ -36,6 +36,7 @@ A[i][j] = 0;
 else
 {
 free(A[i]);
+free(A);
 return (NULL);
 }
 }
