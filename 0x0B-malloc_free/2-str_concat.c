@@ -16,8 +16,7 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-else
-{
+
 for (i = 0; s1[i] != '\0'; i++)
 {
 }
@@ -41,6 +40,5 @@ return (A);
 else
 {
 return (NULL);
-}
 }
 }
