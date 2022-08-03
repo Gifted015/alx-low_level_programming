@@ -36,7 +36,7 @@ A[i][j] = 0;
 else
 {
 for (j = 0; i <= j; i++)
-free(A[i]);
+free(A[j]);
 free(A);
 return (NULL);
 }
