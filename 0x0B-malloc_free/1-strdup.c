@@ -23,7 +23,7 @@ else
 for (i = 0; str[i] != '\0'; i++)
 {
 }
-A = malloc(sizeof(char) * i);
+A = malloc(sizeof(char) * (i + 1));
 
 if (A != NULL)
 {
