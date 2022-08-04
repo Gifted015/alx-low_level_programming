@@ -21,9 +21,9 @@ for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ' && i == 0)
 {
-for (j = 0; str[j] != ' '; j++)
+for (j = i; str[j] != ' '; j++)
 {
-n[r - 1][s - 1] = str[j];
+n[r - 1][s] = str[j];
 n[r - 1] = realloc(n[r - 1], (sizeof(char) * (s + 1)));
 s++;
 }
