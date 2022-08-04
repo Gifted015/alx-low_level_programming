@@ -9,43 +9,37 @@
 
 char **strtow(char *str)
 {
-int i, j, k, r = 1, s = 0;
+int i, j, k, r = 1, s = 1, p = 0;
 char **n;
+
 if (str == NULL)
 return (NULL);
+
 else
 {
 n = malloc(sizeof(char *) * r);
-n[r - 1] = malloc(sizeof(char) * s);
 for (i = 0; str[i] != '\0'; i++)
 {
-if (str[i] != ' ' && i == 0)
+if (str[i] != ' ')
 {
-for (j = i; str[j] != ' '; j++)
-{
-n[r - 1][s] = str[j];
-n[r - 1] = realloc(n[r - 1], (sizeof(char) * (s + 1)));
-s++;
-}
-n = realloc(n, (sizeof(char *) * (r + 1)));
-r++;
-i = j;
-}
-else if (str[i] != ' ' && i != 0)
-{
-s = 0;
+p++;
 n[r - 1] = malloc(sizeof(char) * s);
+j = 0;
 for (k = i; str[k] != ' '; k++)
 {
-n[r - 1][s] = str[k];
+n[r - 1][j] = str[k];
 n[r - 1] = realloc(n[r - 1], (sizeof(char) * (s + 1)));
 s++;
+j++;
 }
 n = realloc(n, (sizeof(char *) * (r + 1)));
-r++;
 i = k;
+r++;
 }
 }
+if (p != 0)
 return (n);
+else
+return (NULL);
 }
 }
