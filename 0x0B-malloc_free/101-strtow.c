@@ -87,12 +87,11 @@ for (k = i; str[k] != ' '; k++)
 n[j][b] = str[k];
 b++;
 }
-n[j][b] = '\0';
 i = k;
 j++;
 }
 }
-n[i] = "";
+n[i - 1] = NULL;
 return (n);
 }
 }
