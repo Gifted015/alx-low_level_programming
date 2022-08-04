@@ -31,7 +31,7 @@ n = realloc(n, (sizeof(char *) * (r + 1)));
 r++;
 i = j;
 }
-if (str[i] != ' ' && i != 0)
+else if (str[i] != ' ' && i != 0)
 {
 s = 0;
 n[r - 1] = malloc(sizeof(char) * s);
