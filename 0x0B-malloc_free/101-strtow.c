@@ -9,13 +9,10 @@
 
 char **strtow(char *str)
 {
-int i, j, k, r = 1, s = 1;
+int i, j, k, r = 1, s = 0;
 char **n;
 if (str == NULL)
-{
 return (NULL);
-}
-
 else
 {
 n = malloc(sizeof(char *) * r);
@@ -48,8 +45,6 @@ n = realloc(n, (sizeof(char *) * (r + 1)));
 r++;
 i = k;
 }
-else
-return (NULL);
 }
 return (n);
 }
