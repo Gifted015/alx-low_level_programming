@@ -25,9 +25,10 @@ void print_tab(char **tab)
  */
 int main(void)
 {
-    char **tab;
+  int i;
+  char **tab;
 
-    tab = strtow("      ALX School         #cisfun      ");
+    tab = strtow("Talk is cheap. Show me the code.");
     if (tab == NULL)
     {
         printf("Failed\n");
@@ -35,4 +36,9 @@ int main(void)
     }
     print_tab(tab);
     return (0);
+for (i = 0; i <= 500; i++)
+{
+free(tab[i]);
+}
+free(tab);
 }

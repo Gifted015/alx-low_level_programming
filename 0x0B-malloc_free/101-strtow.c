@@ -17,14 +17,15 @@ return (NULL);
 
 else
 {
-n = malloc(sizeof(char *) * r);
+n = malloc((sizeof(char *)) * r);
 for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ')
 {
 p++;
-n[r - 1] = malloc(sizeof(char) * s);
 j = 0;
+s = 1;
+n[r - 1] = malloc(sizeof(char) * s);
 for (k = i; str[k] != ' '; k++)
 {
 n[r - 1][j] = str[k];
@@ -32,7 +33,7 @@ n[r - 1] = realloc(n[r - 1], (sizeof(char) * (s + 1)));
 s++;
 j++;
 }
-n = realloc(n, (sizeof(char *) * (r + 1)));
+n = realloc(n, ((sizeof(char *)) * (r + 1)));
 i = k;
 r++;
 }
@@ -40,6 +41,13 @@ r++;
 if (p != 0)
 return (n);
 else
+{
+for (i = 0; i <= r; i++)
+{
+free(n[i]);
+}
+free(n);
 return (NULL);
+}
 }
 }
