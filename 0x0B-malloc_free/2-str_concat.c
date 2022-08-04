@@ -1,44 +1,108 @@
 #include "main.h"
 
 /**
- *str_concat - concatenates two strings
- *@s1: first string
- *@s2: second string
- *Return: NULL on failure and
- *pointer to the concatenated stings on success
+ * countWords - counts the numbers o words in the string
+ *
+ * @str: source string
+ *
+ * Return: the number of words.
  */
 
-char *str_concat(char *s1, char *s2)
+int countWords(char *str)
 {
-unsigned int i, j;
-char *A;
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
+int words;
 
-for (i = 0; s1[i] != '\0'; i++)
+words = 0;
+
+while (*str)
 {
-}
-for (j = 0; s2[j] != '\0'; j++)
+if (*str != ' ')
 {
-}
-A = malloc(sizeof(char) * (i + j + 1));
-if (A != NULL)
-{
-for (i = 0; s1[i] != '\0'; i++)
-{
-A[i] = s1[i];
-}
-for (j = 0;  s2[j] != '\0'; j++)
-{
-A[i] = s2[j];
-i++;
-}
-return (A);
+if (*(str + 1) == ' ' || *(str + 1) == '\0')
+words++;
+str++;
 }
 else
+str++;
+}
+return (words);
+}
+
+/**
+ * countChars - counts the numbers o characters in a string
+ *
+ * @str: source string
+ *
+ * Return: the number of words.
+ */
+
+int countChars(char *str)
 {
+int chars;
+
+chars = 0;
+while (*str)
+{
+if (*str != ' ')
+{
+if (*(str + 1) != ' ' || *(str + 1) != '\0')
+chars++;
+str++;
+}
+else
+break;
+}
+return (chars);
+}
+
+/**
+ * strtow - separates the character to an string of words
+ *
+ * @str: source string
+ *
+ * Return: the pointer to the new array of words.
+ */
+
+char **strtow(char *str)
+{
+int numWords, numChars, i, j;
+char **words;
+
+i = 0;
+if (str == NULL || *str == '\0')
+return (NULL);
+numWords = countWords(str);
+if (numWords == 0)
+return (NULL);
+words = (char **)malloc((numWords + 1) * sizeof(char *));
+if (words == NULL)
+{
+free(words);
 return (NULL);
 }
+while (i < numWords)
+{
+if (*str == ' ')
+str++;
+else
+{
+numChars = countChars(str);
+*(words + i) = (char *) malloc((numChars + 1) * sizeof(char));
+if (*(words + i) == NULL)
+{
+for (j = 0; j < i; j++)
+free(*(words + j));
+free(words);
+return (NULL);
+}
+for (j = 0; j < numChars; j++)
+{
+*(*(words + i) +j) = *str;
+str++; }
+*(*(words + i) +j) = '\0';
+i++;
+}
+}
+*(words + numWords) = NULL;
+return (words);
 }
