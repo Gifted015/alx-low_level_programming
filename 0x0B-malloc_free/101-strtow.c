@@ -1,6 +1,60 @@
 #include "main.h"
 
 /**
+ *checkw - checks how many words a string contain
+ *@str: string
+ *Return: p if successful or 0 if it fails
+ */
+
+int checkw(char *str)
+{
+int i, k, p = 0;
+
+if (str == NULL)
+return (0);
+
+else
+{
+for (i = 0; str[i] != '\0'; i++)
+{
+if (str[i] != ' ')
+{
+p = p + 1;
+for (k = i; str[k] != ' '; k++)
+{
+}
+i = k;
+}
+}
+
+if (p != 0)
+return (p);
+
+else
+return (0);
+}
+}
+
+/**
+ *checkc - checks how many character a word contain
+ *@str: string
+ *@i: position of first word in string
+ *Return: j if successful or NULL if it fails
+ */
+
+int checkc(char *str, int i)
+{
+int j = 0, k;
+
+for (k = i; str[k] != ' '; k++)
+{
+j++;
+}
+return (j);
+}
+
+
+/**
  *strtow - splits a string into words
  *@str: string
  *Return: pointer to a an array of strings(words) if successful
@@ -9,45 +63,39 @@
 
 char **strtow(char *str)
 {
-int i, j, k, r = 1, s = 1, p = 0;
+int a, c, b = 0, i, j = 0, k;
 char **n;
 
-if (str == NULL)
+c = checkw(str);
+
+if (c == 0)
 return (NULL);
 
 else
 {
-n = malloc((sizeof(char *)) * r);
+n = (char **)malloc(sizeof(char *) * (c + 1));
+if (n != NULL)
+{
 for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ')
 {
-p++;
-j = 0;
-s = 1;
-n[r - 1] = malloc(sizeof(char) * s);
+a = checkc(str, i);
+n[j] = (char *)malloc(sizeof(char) * (a + 1));
+if (n[j] != NULL)
+{
+b = 0;
 for (k = i; str[k] != ' '; k++)
 {
-n[r - 1][j] = str[k];
-n[r - 1] = realloc(n[r - 1], (sizeof(char) * (s + 1)));
-s++;
+n[j][b] = str[k];
+b++;
+}
+i = k;
 j++;
 }
-n = realloc(n, ((sizeof(char *)) * (r + 1)));
-i = k;
-r++;
 }
 }
-if (p != 0)
+}
 return (n);
-else
-{
-for (i = 0; i <= r; i++)
-{
-free(n[i]);
-}
-free(n);
-return (NULL);
-}
 }
 }
