@@ -48,6 +48,8 @@ n = realloc(n, (sizeof(char *) * (r + 1)));
 r++;
 i = k;
 }
+else
+return (NULL);
 }
 return (n);
 }
