@@ -76,8 +76,9 @@ else
 n = (char **)malloc(sizeof(char *) * (c + 1));
 for (i = 0; str[i] != '\0'; i++)
 {
-
-if (str[i] != ' ')
+if (str[i] == '\0')
+break;
+else if (str[i] != ' ')
 {
 a = checkc(str, i);
 n[j] = (char *)malloc(sizeof(char) * (a + 1));
@@ -91,7 +92,7 @@ i = k;
 j++;
 }
 }
-n[i - 1] = NULL;
+n[i] = NULL;
 return (n);
 }
 }
