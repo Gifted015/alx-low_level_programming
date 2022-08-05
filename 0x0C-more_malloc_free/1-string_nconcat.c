@@ -16,18 +16,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 unsigned int i, j;
 char *new;
 
-if (s1 == NULL || s2 == NULL)
-return (NULL);
-
-else
-{
 for (i = 0; s1[i] != '\0'; i++)
 {
 }
 new = malloc(sizeof(char) * (i + n + 1));
 
- if (new != NULL)
-   {
+if (new != NULL)
+{
 for (i = 0; s1[i] != '\0'; i++)
 {
 new[i] = s1[i];
@@ -44,6 +39,5 @@ return (new);
 }
 
 else
-return(NULL);
-}
+return (NULL);
 }
