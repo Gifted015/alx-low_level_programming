@@ -19,7 +19,7 @@ char *new;
 for (i = 0; s1[i] != '\0'; i++)
 {
 }
-new = malloc(sizeof(char) * (i + n));
+new = malloc(sizeof(char) * (i + n + 1));
 
 for (i = 0; s1[i] != '\0'; i++)
 {
