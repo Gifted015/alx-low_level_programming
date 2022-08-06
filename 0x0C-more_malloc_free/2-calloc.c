@@ -22,10 +22,10 @@ n = malloc(nmemb * size);
 
 if (n == NULL)
 return (NULL);
- 
+
 else
 {
-for(i = 0; i < (nmemb * size); i++)
+for (i = 0; i < (nmemb * size); i++)
 {
 n[i] = 0;
 }
