@@ -41,6 +41,7 @@ new = malloc(new_size);
 if (new != NULL)
 {
 new = ptr;
+free(ptr);
 return (new);
 }
 
