@@ -85,6 +85,8 @@ int main(int ac, char *av[])
 int i, k, j, num_1 = 0, num_2 = 0, *res, *arg_1, *arg_2;
 if (ac != 3)
 error();
+if (*av[1] == 48 || *av[2] == 48)
+_putchar(48);
 else
 {
 num_1 = num(av[1]);
@@ -111,7 +113,7 @@ for (i = (num_1 + num_2); i >= 0; i--)
 if (res[i] > 0)
 break;
 for (k = i; k >= 0; k--)
-_putchar(res[k] + 48);
-_putchar('\n'); }
+_putchar(res[k] + 48);}
 free(arg_1), free(arg_2), free(res); }
+_putchar('\n');
 return (0); }
