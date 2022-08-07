@@ -113,7 +113,7 @@ for (i = (num_1 + num_2); i >= 0; i--)
 if (res[i] > 0)
 break;
 for (k = i; k >= 0; k--)
-_putchar(res[k] + 48);}
+_putchar(res[k] + 48); }
 free(arg_1), free(arg_2), free(res); }
 _putchar('\n');
 return (0); }
