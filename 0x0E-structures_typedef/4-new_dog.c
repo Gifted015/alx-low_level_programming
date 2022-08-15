@@ -31,9 +31,9 @@ d->owner = malloc(sizeof(char) * (ownerlen + 1));
 
 if (d->name == NULL || d->owner == NULL)
 {
-free (d->name);
-free (d->owner);
-free (d);
+free(d->name);
+free(d->owner);
+free(d);
 return (NULL);
 }
 
