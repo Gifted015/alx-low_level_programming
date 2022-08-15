@@ -1,3 +1,7 @@
+#ifndef NULL
+#define NULL ((void *)0)
+#endif
+
 #ifndef Dog
 #define Dog
 
