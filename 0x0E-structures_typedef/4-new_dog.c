@@ -21,7 +21,7 @@ return (NULL);
 
 if (owner == NULL)
 return (NULL);
-   
+
 else
 {
 d.name = name;
