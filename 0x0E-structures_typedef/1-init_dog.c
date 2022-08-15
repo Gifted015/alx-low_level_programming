@@ -1,5 +1,10 @@
 #include "dog.h"
 
+#ifndef NULL
+#define NULL ((void *)0)
+#endif
+
+
 /**
  *init_dog - initialize a variable of type struct dog
  *@d: variable
@@ -11,7 +16,10 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+if (d != NULL)
+{
 d->name = name;
 d->age = age;
 d->owner = owner;
+}
 }
