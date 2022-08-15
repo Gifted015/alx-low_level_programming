@@ -23,13 +23,15 @@ d = malloc(sizeof(dog_t));
 
 for (x = 0; name[x] != '\0'; x++)
 namelen++;
-d->name = malloc(sizeof(char) * (namelen + 1));
+
+d->name = malloc(sizeof(d->name) * namelen);
 
 for (x = 0; owner[x] != '\0'; x++)
 ownerlen++;
-d->owner = malloc(sizeof(char) * (ownerlen + 1));
 
-if (d->name == NULL || d->owner == NULL)
+d->owner = malloc(sizeof(d->owner) * ownerlen);
+
+if (d->name == NULL || d->owner == NULL || d == NULL)
 {
 free(d->name);
 free(d->owner);
