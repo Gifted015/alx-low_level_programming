@@ -25,10 +25,10 @@ for (x = 0; name[x] != '\0'; x++)
 namelen++;
 for (x = 0; owner[x] != '\0'; x++)
 ownerlen++;
-d->name = malloc(sizeof(d->name) * (namelen + 1));
+d->name = malloc(sizeof(d->name) * (namelen));
 if (d->name != NULL)
 {
-for (x = 0; name[x] != '\0'; x++)
+for (x = 0; x <= namelen; x++)
 d->name[x] = name[x];
 }
 else
@@ -38,10 +38,10 @@ free(d);
 return (NULL);
 }
 d->age = age;
-d->owner = malloc(sizeof(d->owner) * (ownerlen + 1));
+d->owner = malloc(sizeof(d->owner) * (ownerlen));
 if (d->owner != NULL)
 {
-for (x = 0; owner[x] != '\0'; x++)
+for (x = 0; x <= ownerlen; x++)
 d->owner[x] = owner[x]; }
 else
 {
