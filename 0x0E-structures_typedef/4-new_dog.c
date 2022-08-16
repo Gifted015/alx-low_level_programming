@@ -48,7 +48,6 @@ d->age = age;
 
 for (x = 0; owner[x] != '\0'; x++)
 d->owner[x] = owner[x];
-
 return (d);
 }
 }
