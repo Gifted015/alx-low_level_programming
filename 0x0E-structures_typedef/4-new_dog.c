@@ -25,7 +25,7 @@ for (x = 0; name[x] != '\0'; x++)
 namelen++;
 for (x = 0; owner[x] != '\0'; x++)
 ownerlen++;
-d->name = malloc(sizeof(d->name) * namelen);
+d->name = malloc(sizeof(d->name) * (namelen + 1));
 if (d->name != NULL)
 {
 for (x = 0; name[x] != '\0'; x++)
@@ -38,7 +38,7 @@ free(d);
 return (NULL);
 }
 d->age = age;
-d->owner = malloc(sizeof(d->owner) * ownerlen);
+d->owner = malloc(sizeof(d->owner) * (ownerlen + 1));
 if (d->owner != NULL)
 {
 for (x = 0; owner[x] != '\0'; x++)
