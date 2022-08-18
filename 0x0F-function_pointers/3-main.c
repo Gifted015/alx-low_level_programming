@@ -20,6 +20,12 @@ printf("Error\n");
 exit(98);
 }
 
+if (*av[2] == '.')
+{
+printf("Error\n");
+exit(99);
+}
+
 else
 {
 cal = get_op_func(av[2]);
