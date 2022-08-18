@@ -20,24 +20,16 @@ printf("Error\n");
 exit(98);
 }
 
-if (*av[2] == '.')
+else
+{
+if (*av[2] == '.' || strlen(av[2]) != 1)
 {
 printf("Error\n");
 exit(99);
 }
 
-else
-{
 cal = get_op_func(av[2]);
 
-if (cal == NULL || strlen(av[2]) != 1)
-{
-printf("Error\n");
-exit(99);
-}
-
-else
-{
 result = cal(atoi(av[1]), atoi(av[3]));
 if ((*av[2] == '/' || *av[2] == '%') && result <= 0)
 {
@@ -45,7 +37,6 @@ printf("Error\n");
 exit(100);
 }
 printf("%d\n", result);
-}
 }
 
 return (0);
