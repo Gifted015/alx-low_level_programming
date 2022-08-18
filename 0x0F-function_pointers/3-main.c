@@ -14,7 +14,7 @@ int main(int ac, char *av[])
 int (*cal)(int, int);
 int result;
 
-if (ac != 4 || strlen(av[2]) != 1)
+if (ac != 4)
 {
 printf("Error\n");
 exit(98);
@@ -24,7 +24,7 @@ else
 {
 cal = get_op_func(av[2]);
 
-if (cal == NULL)
+if (cal == NULL || strlen(av[2]) != 1)
 {
 printf("Error\n");
 exit(99);
