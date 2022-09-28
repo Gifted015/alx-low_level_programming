@@ -11,7 +11,9 @@ void free_list(list_t *head)
 {
 list_t *nex, *cur;
 
-nex = (list_t *)head;
+if (head != NULL)
+{
+nex = head;
 
 while (nex->next != NULL)
 {
@@ -24,4 +26,5 @@ free(cur);
 
 free(nex->str);
 free(nex);
+}
 }
