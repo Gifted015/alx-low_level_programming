@@ -2,7 +2,7 @@
 
 
 /**
- *print_list - counts the number of elements of a list_t list
+ *list_len - counts the number of elements of a list_t list
  *@h: list containing elements
  *Return: the number of elements in h
  */
@@ -19,13 +19,10 @@ else
 {
 nex = (list_t *)h;
 
-while (x)
+while (nex->next != NULL)
 {
 nex = nex->next;
 x++;
-
-if (nex->next == NULL)
-break;
 }
 
 return (x);
