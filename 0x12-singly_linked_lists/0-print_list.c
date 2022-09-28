@@ -14,6 +14,11 @@ int len;
 char *str;
 list_t *nex;
 
+if (h == NULL)
+return (0)
+
+else
+{
 nex = (list_t *)h;
 
 while (x)
@@ -34,4 +39,5 @@ x++;
 }
 
 return (x);
+}
 }
