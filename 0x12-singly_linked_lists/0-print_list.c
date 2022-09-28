@@ -15,7 +15,7 @@ char *str;
 list_t *nex;
 
 if (h == NULL)
-return (0)
+return (0);
 
 else
 {
