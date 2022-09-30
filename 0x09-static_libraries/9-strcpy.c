@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-strlen.c"
 /**
  *_strcpy - copies the string from src to the buffer
  *Description: including the terminating null byte (\0)
