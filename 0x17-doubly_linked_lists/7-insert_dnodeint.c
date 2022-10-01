@@ -30,11 +30,24 @@ new->n = n;
 temp = new;
 break;
 }
+
+if (x + 1 == idx && temp->next == NULL)
+break;
+
 temp = temp->next;
 x++;
 }
 
-if (x == idx)
+if (x + 1 == idx)
+{
+new = malloc(sizeof(dlistint_t));
+new->prev = temp;
+new->next = NULL;
+new->n = n;
+temp = new;
+}
+
+if (x == idx || x + 1 == idx)
 {
 while (new->prev != NULL)
 {
