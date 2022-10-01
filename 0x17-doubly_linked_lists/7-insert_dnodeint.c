@@ -20,7 +20,7 @@ if (x == idx)
 {
 new = malloc(sizeof(dlistint_t));
 if (new == NULL)
-return NULL;
+return (NULL);
 new->prev = temp->prev;
 new->next = temp;
 new->n = n;
