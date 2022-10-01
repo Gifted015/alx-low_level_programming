@@ -43,7 +43,7 @@ new = new->prev;
 new->next = ret;
 }
 *h = new;
-return (temp);
+return (*h);
 }
 }
 return (NULL);
