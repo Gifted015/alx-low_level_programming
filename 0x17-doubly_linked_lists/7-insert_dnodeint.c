@@ -21,7 +21,10 @@ if (x == idx)
 new = malloc(sizeof(dlistint_t));
 
 if (new == NULL)
+{
+free(new);
 return (NULL);
+}
 
 new->n = n;
 
@@ -39,7 +42,10 @@ if (x + 1 == idx)
 new = malloc(sizeof(dlistint_t));
 
 if (new == NULL)
+{
+free(new);
 return (NULL);
+}
 
 new->n = n;
 
