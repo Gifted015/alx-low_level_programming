@@ -15,13 +15,14 @@ dlistint_t *new_node(dlistint_t *temp, unsigned int idx, int n, unsigned int x)
 {
 dlistint_t *new;
 
-
 if (x == idx)
 {
 new = malloc(sizeof(dlistint_t));
-
 if (new == NULL)
+{
+free(new);
 return (NULL);
+}
 
 new->n = n;
 
@@ -33,13 +34,14 @@ new->prev = temp->prev, temp->prev = new;
 new->next = temp;
 }
 
-
 else if (x + 1 == idx)
 {
 new = malloc(sizeof(dlistint_t));
-
 if (new == NULL)
+{
+free(new);
 return (NULL);
+}
 
 new->n = n;
 
@@ -50,7 +52,6 @@ temp->next = new->prev = temp;
 
 new->next = NULL;
 }
-
 return (new);
 }
 
