@@ -34,7 +34,7 @@ new->next = temp;
 }
 
 
-if (x + 1 == idx)
+else if (x + 1 == idx)
 {
 new = malloc(sizeof(dlistint_t));
 

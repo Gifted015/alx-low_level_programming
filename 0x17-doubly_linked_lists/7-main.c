@@ -25,12 +25,6 @@ int main(void)
     printf("-----------------\n");
     insert_dnodeint_at_index(&head, 8, 4096);
     print_dlistint(head);
-
-    while(head->next != NULL)
-      head = head->next;
-    printf("-----------------\n");
-    while(head != NULL)
-      printf("%d\n", head->n), head = head->prev;
     free_dlistint(head);
     head = NULL;
     return (EXIT_SUCCESS);
