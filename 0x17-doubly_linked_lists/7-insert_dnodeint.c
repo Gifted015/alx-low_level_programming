@@ -32,12 +32,12 @@ if (x == idx)
 new = malloc(sizeof(dlistint_t));
 if (new == NULL)
 return (NULL);
+new->n = n;
 if (temp == NULL)
 new->prev = NULL;
 else
-new->prev = temp->prev;
+new->prev = temp->prev, temp->prev = new;
 new->next = temp;
-new->n = n;
 temp = new;
 }
 
@@ -46,12 +46,12 @@ if (x + 1 == idx)
 new = malloc(sizeof(dlistint_t));
 if (new == NULL)
 return (NULL);
+new->n = n;
 if (temp == NULL)
 new->prev = NULL;
 else
-new->prev = temp;
+temp->next = new->prev = temp;
 new->next = NULL;
-new->n = n;
 temp = new;
 }
 
