@@ -64,7 +64,7 @@ new = new->prev;
 new->next = ret;
 }
 *h = new;
-return (*h);
+return (temp);
 }
 
 return (NULL);
