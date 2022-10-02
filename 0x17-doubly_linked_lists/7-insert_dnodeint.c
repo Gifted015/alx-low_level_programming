@@ -1,5 +1,59 @@
 #include "lists.h"
 
+
+/**
+ *new_node - helps in inserts a new node at a given position
+ *@temp: the head of the doubly linked list
+ *@idx: index of temp indicating the postion for new node to be added
+ *@n: integer to be added in new node
+ *@x: current index
+ *Return: the address of the new node
+ */
+
+
+dlistint_t *new_node(dlistint_t *temp, unsigned int idx, int n, unsigned int x)
+{
+dlistint_t *new;
+
+
+if (x == idx)
+{
+new = malloc(sizeof(dlistint_t));
+
+if (new == NULL)
+return (NULL);
+
+new->n = n;
+
+if (temp == NULL)
+new->prev = NULL;
+else
+new->prev = temp->prev, temp->prev = new;
+
+new->next = temp;
+}
+
+
+if (x + 1 == idx)
+{
+new = malloc(sizeof(dlistint_t));
+
+if (new == NULL)
+return (NULL);
+
+new->n = n;
+
+if (temp == NULL)
+new->prev = NULL;
+else
+temp->next = new->prev = temp;
+
+new->next = NULL;
+}
+
+return (new);
+}
+
 /**
  *insert_dnodeint_at_index - inserts a new node at a given position
  *@h: pointer to the head of the doubly linked list
@@ -27,33 +81,8 @@ temp = temp->next;
 x++;
 }
 
-if (x == idx)
-{
-new = malloc(sizeof(dlistint_t));
-if (new == NULL)
-return (NULL);
-new->n = n;
-if (temp == NULL)
-new->prev = NULL;
-else
-new->prev = temp->prev, temp->prev = new;
-new->next = temp;
+new = new_node(temp, idx, n, x);
 temp = new;
-}
-
-if (x + 1 == idx)
-{
-new = malloc(sizeof(dlistint_t));
-if (new == NULL)
-return (NULL);
-new->n = n;
-if (temp == NULL)
-new->prev = NULL;
-else
-temp->next = new->prev = temp;
-new->next = NULL;
-temp = new;
-}
 
 if (x == idx || x + 1 == idx)
 {
