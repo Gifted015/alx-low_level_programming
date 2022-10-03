@@ -25,7 +25,8 @@ if (temp == NULL)
 return (-1);
 
 if (temp->n < 0)
-return (-1);
+while (temp->prev != NULL)
+temp = temp->prev;
 
 else
 {
