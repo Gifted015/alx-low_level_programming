@@ -21,11 +21,11 @@ temp = temp->next, x++;
 
 if (x == index)
 {
-if (temp->n < 0)
-return (-1)
-
 if (temp == NULL)
-*head = NULL;
+return (-1);
+
+if (temp->n < 0)
+return (-1);
 
 else
 {
