@@ -41,6 +41,7 @@ while (new->prev != NULL)
 new = new->prev;
 }
 
+free(temp);
 *head = new;
 }
 
