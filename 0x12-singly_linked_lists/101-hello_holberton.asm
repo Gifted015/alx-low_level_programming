@@ -1,7 +1,25 @@
-BITS 64
-mov rax, QWORD 'A'
-add rax, QWORD '0'
-mov rdx, QWORD 0x3f8
-out dx, al
-mov rax, QWORD 0xc000
-jmp rax
+	;; File: 101-hello_holberton.asm
+	;; Auth: Omoyeni Oreoluwani @ alx-school
+	;; Desc: 64-bit assembly program that prnts
+	;; 	Hello, Holberton followed by a new line.
+
+	extern printf
+
+	section .text
+	global main
+main:
+	push rbp
+
+	mov rdi,fmt
+	mov rsi,msg
+	mov rax,0
+	call printf
+
+	pop rbp
+
+	mov rax,0
+	ret
+
+	section .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
