@@ -82,6 +82,13 @@ temp = temp->next;
 x++;
 }
 
+new = malloc(sizeof(dlistint_t));
+if (new == NULL)
+{
+free(new);
+return (NULL);
+}
+
 new = new_node(temp, idx, n, x);
 temp = new;
 
