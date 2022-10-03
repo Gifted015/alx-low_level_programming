@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- *delete_dnodeint_at_index - deletes the node at index index of a dlistint_t linked list
+ *delete_dnodeint_at_index - deletes the node at index of a doubly linked list
  *@head: the doubly linked list head
  *@index: index of the node to be deleted
  *Return: 1 if it succeeded, -1 if it failed
@@ -16,13 +16,14 @@ while (temp != NULL)
 {
 if (x == index)
 break;
-
-temp = temp->next;
-x++;
+temp = temp->next, x++;
 }
 
 if (x == index)
 {
+if (temp->n < 0)
+return (-1)
+
 if (temp == NULL)
 *head = NULL;
 
@@ -44,10 +45,8 @@ new = new->prev;
 free(temp);
 *head = new;
 }
-
 return (1);
 }
-
 else
 return (-1);
 }
