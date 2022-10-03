@@ -30,7 +30,7 @@ if (temp->next != NULL)
 {
 temp->next->prev = new;
 new = temp->next;
- }
+}
 
 if (new != NULL)
 {
