@@ -30,10 +30,12 @@ return (res);
 
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int x, temp, len = strlen(b), res = 0;
+unsigned int x, temp, len, res = 0;
 
 if (b == NULL)
 return (0);
+
+len = strlen(b);
 for (x = 0; x < strlen(b); x++)
 {
 if (b[x] == '1' || b[x] == '0')
