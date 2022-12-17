@@ -11,6 +11,6 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 int result;
-resutlt = (n << (index + 1)) & 1;
+result = (n << (index + 1)) & 1;
 return(result);
 }
