@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+int set_bit(unsigned long int *n, unsigned int index);
 int get_bit(unsigned long int n, unsigned int index);
 void print_binary(unsigned long int n);
 int _pow(int a, int b);
