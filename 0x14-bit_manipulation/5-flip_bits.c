@@ -16,7 +16,5 @@ while (n >> 0)
 if ((n & 1) != (m & 1))
 num++;
 n = n >> 1;
-m = m >> 1;
-}
-return (num);
-}
+m = m >> 1; }
+return (num); }
