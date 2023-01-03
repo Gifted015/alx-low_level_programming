@@ -16,7 +16,7 @@ unsigned int num = 0;
 while (n >> 0)
 {
 if ((n & 1) != (m & 1))
-num++;
+num++;1
 n = n >> 1;
 m = m >> 1;
 }
