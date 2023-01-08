@@ -14,7 +14,7 @@ size_t x;
 
 temp = (listint_t *)h;
 
-for(x = 0; temp != NULL; x++, temp = temp->next)
+for (x = 0; temp != NULL; x++, temp = temp->next)
 {
 printf("%d\n", temp->n);
 }
