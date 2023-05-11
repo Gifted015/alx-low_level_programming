@@ -20,6 +20,7 @@ return (0);
 num = (temp)->n;
 temp = (temp)->next;
 *head = temp;
+free(temp);
 
 return (num);
 }
