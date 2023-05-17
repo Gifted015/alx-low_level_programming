@@ -3,8 +3,10 @@
 
 /**
  *insert_nodeint_at_index - inserts a new node at a given position
- *@head: pointer to head of the listint_t list to which new node is to be added to
- *@idx: the index of the list where the new node should be added. Index starts at 0
+ *@head: pointer to head of the listint_t list
+ *to which new node is to be added to
+ *@idx: the index of the list where the new node should be added
+ *Index starts at 0
  *@n: integer to be put in the new node
  *Return: the address of the new node, or NULL if it failed
  */
@@ -31,14 +33,20 @@ if (temp->next == NULL)
 return (NULL);
 temp = temp->next;
 }
+
 new->n = n;
+
 if (idx == 0)
-temp2 = temp;
+new->next = *head, *head = new;
+
 else
+{
 temp2 = temp->next;
 temp->next = new;
 new->next = temp2;
 temp->next = new;
+}
+
 return (new);
 }
 }
