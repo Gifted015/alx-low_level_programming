@@ -19,7 +19,7 @@ h = fopen("filename", "r");
 n = read(1, h, letters);
 fclose(h);
 
-if (n < letters)
+if (n < (ssize_t)letters)
 return (0);
 else
 return (n);
