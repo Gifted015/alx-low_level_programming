@@ -1,1 +1,0 @@
-Repository for low level programming, focusing on C - Singly linked lists
