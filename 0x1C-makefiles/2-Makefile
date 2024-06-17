@@ -1,7 +1,7 @@
 all: school
 
 SRC = main.c school.c
-OBJ = $(SRC:%.c=%)
+OBJ = main.o school.o
 CC = gcc
 NAME = main.o school.o
 
