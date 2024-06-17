@@ -1,9 +1,9 @@
-all: school
-
 SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
 CC = gcc
 NAME = school
+all: ${NAME}
+
 %.o: $SRC
 	${CC} -c -o $@ $^
 ${NAME}: ${OBJ}
