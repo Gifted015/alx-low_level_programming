@@ -1,8 +1,8 @@
-SRCS := $(wildcard *.c)
+objects = main.c school.c
 
-all: ${SRCS}
+all: ${objects}
 
 CC = gcc
 
-%.c: %
-	${CC} $@ -o $&lt;
+school: ${objects}
+	${CC} ${objects} -o $@;
