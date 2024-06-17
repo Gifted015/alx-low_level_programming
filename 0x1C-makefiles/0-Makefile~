@@ -1,0 +1,6 @@
+all : school
+
+CC = gcc
+
+%.c:
+	${CC} $< -o $@

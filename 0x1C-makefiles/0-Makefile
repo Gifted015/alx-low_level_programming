@@ -1,0 +1,8 @@
+SRCS := $(wildcard *.c)
+
+all: ${SRCS}
+
+CC = gcc
+
+%.c: %
+	${CC} $@ -o $&lt;
