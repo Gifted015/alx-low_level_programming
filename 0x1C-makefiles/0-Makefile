@@ -1,8 +1,6 @@
-objects = main.c school.c
-
-all: ${objects}
+all: school
 
 CC = gcc
 
-school: ${objects}
-	${CC} ${objects} -o $@;
+school: main.c school.c
+	${CC} main.c school.c -o $@
