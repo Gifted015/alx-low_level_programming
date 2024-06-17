@@ -1,0 +1,10 @@
+all: school
+
+SRC = main.c school.c
+OBJ = $(SRC:%.c=%)
+CC = gcc
+
+%.c: %.o
+	${CC} -c -o $< $@
+school: ${OBJ}
+	${CC} ${OBJ} -o $@
