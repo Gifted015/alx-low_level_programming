@@ -1,4 +1,4 @@
-SRC = $(wildcard *.c)
+SRC = school.c main.c
 
 all: ${SRC}
 
