@@ -4,7 +4,7 @@ CC = gcc
 NAME = school
 all: ${NAME}
 
-%.o: $SRC
-	${CC} -c -o $@ $^
-${NAME}: ${OBJ}
+%.o: %.c
+	${CC} -c -o $@ $<
+${NAME}: $OBJ
 	${CC} ${OBJ} -o $@
