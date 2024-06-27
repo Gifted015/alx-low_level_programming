@@ -49,9 +49,9 @@ def island_perimeter(grid):
                     elif j == column - 1 and grid[i][j - 1] == 1:
                         cell_num -= 1
                 if column > 2 and 0 < j < column - 1:
-                    if grid[i][j - 1] == 1 and grid[i][j - 1] == 1:
+                    if grid[i][j - 1] == 1 and grid[i][j + 1] == 1:
                         cell_num -= 2
-                    elif grid[i][j - 1] == 1 or grid[i][j - 1] == 1:
+                    elif grid[i][j - 1] == 1 or grid[i][j + 1] == 1:
                         cell_num -= 1
 
                 if cell_num < 4:
