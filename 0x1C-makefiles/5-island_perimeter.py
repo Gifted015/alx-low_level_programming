@@ -46,7 +46,8 @@ def island_perimeter(grid):
                 if column > 1:
                     if j == 0 and grid[i][j + 1] == 1:
                         cell_num -= 1
-                    elif i == column - 1 and grid[i][j - 1] == 1:
+                    elif j == column - 1 and grid[i][j - 1] == 1:
+                        print("hi", end="")
                         cell_num -= 1
                 if column > 2 and 0 < j < column - 1:
                     if grid[i][j - 1] == 1 and grid[i][j - 1] == 1:
@@ -75,5 +76,7 @@ def island_perimeter(grid):
                                 check2 += 1
                         if length == check1 and length == check2:
                             cell_num -= 1
+            print(cell_num, end=" ")
+        print("\n")
         perimeter += cell_num
     return perimeter
