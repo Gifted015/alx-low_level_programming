@@ -7,6 +7,7 @@ Function:
 - island_perimeter: returns the perimeter of the island described in grid
 """
 
+
 def island_perimeter(grid):
     """
     returns the perimeter of the island described in grid
@@ -16,8 +17,10 @@ def island_perimeter(grid):
        One cell is a square with side length 1
        Grid cells are connected horizontally/vertically (not diagonally).
        Grid is rectangular, width and height don’t exceed 100
-    Grid is completely surrounded by water, and there is one island (or nothing).
-    The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island).
+    Grid is completely surrounded by water,
+    and there is one island (or nothing).
+    The island doesn’t have “lakes”
+    (water inside that isn’t connected to the water around the island).
     """
     row = len(grid)
     perimeter = 0
@@ -27,14 +30,14 @@ def island_perimeter(grid):
         for j in range(column):
             cell = grid[i][j]
             if cell == 1:
-                cell_num = 4
-                
+                cell_num += 4
+
                 if row > 1:
                     if i == 0 and grid[i + 1][j] == 1:
                         cell_num -= 1
                     elif i == row - 1 and grid[i - 1][j] == 1:
                         cell_num -= 1
-                elif row > 2 and 0 < i < row - 1:
+                if row > 2 and 0 < i < row - 1:
                     if grid[i - 1][j] == 1 and grid[i + 1][j] == 1:
                         cell_num -= 2
                     elif grid[i - 1][j] == 1 or grid[i + 1][j] == 1:
@@ -45,7 +48,7 @@ def island_perimeter(grid):
                         cell_num -= 1
                     elif i == column - 1 and grid[i][j - 1] == 1:
                         cell_num -= 1
-                elif column > 2 and  0 < j < column - 1:
+                if column > 2 and 0 < j < column - 1:
                     if grid[i][j - 1] == 1 and grid[i][j - 1] == 1:
                         cell_num -= 2
                     elif grid[i][j - 1] == 1 or grid[i][j - 1] == 1:
@@ -54,7 +57,6 @@ def island_perimeter(grid):
                 if cell_num < 4:
                     start = j
 
-                
             elif cell == 0:
                 if cell_num == 0:
                     pass
