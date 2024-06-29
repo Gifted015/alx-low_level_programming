@@ -20,14 +20,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME) $(CFLAGS)
 
-# Rule to compile main.c
-main.o: main.c
-	$(CC) -c main.c -o main.o $(CFLAGS)
-
-# Rule to compile school.c
-school.o: school.c
-	$(CC) -c school.c -o school.o $(CFLAGS)
-
 # Clean rule: delete Emacs and Vim temporary files and executable
 clean:
 	@$(RM) *~ $(NAME)
